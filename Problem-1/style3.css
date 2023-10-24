@@ -1,0 +1,18 @@
+/* table{
+    width: 30%;
+    border: width 1px;
+    border-style: solid;
+    border-color: black;
+}
+table th,table td{            
+    border-width:1px; 
+    border-style: solid; 
+    border-color: #000000; 
+    padding: 3px 5px;
+}  */
+
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
