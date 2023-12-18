@@ -1,0 +1,1333 @@
+Solid Principal
+(Single responsiblity)/ Open for extension/close for modificagtion/liskov substituation(parent can be sub by child)/ interface seg()/Dependency injection
+Exception Propogation
+NoClassdeferror
+Equals method of object and equals method String 
+Exception
+String pool question
+JAVA 8 features
+Singelton class
+Observer
+facade- abstraction  from front end to backend
+Mediator- air traffic example
+Method overriding 
+15+10+"Java"+10+15
+Volatile
+Facade layer
+Spring IOC -- achiveing DI managing the the lifecycle bean
+Transient
+jDK vS JRE vs JVm
+Externalization
+java memory leak
+Hash Collision
+EJB
+
+[Monday 7:34 PM] Maloy Kumar Bain
+access needed as per 
+https://devcloud.swcoe.ge.com/devspace/pages/viewpage.action?spaceKey=AISSA&title=Access+Required+for+Development
+
+[Monday 7:34 PM] Jumbish Jain
+I have
+
+  
+  ASFPJ9429D
+  
+See yourself as the leader of every situation, not one of the followers. This will start to change the way you think overall.
+Also, put yourself in situations you find uncomfortable. It’s like jumping into cold water. Just do it.
+After a few seconds, you’ll realize that there was nothing to be afraid of in the first place, and you’ll develop character. That’s one thing all alphas have: character.
+
+
+find /tmp -name \*bar
+/tmp/.foobar
+
+
+
+com.microstrategy.web.objects.WebIServerSessionImpl@1d42739a
+ Ses. ID 42019F4D542B38658F6B7F5729BCA3A1PRDSDCAPP42301.EMEA.ADSINT.BIZ:2057^0@34952$PROJECT
+ Login   enter_user_admin
+ Locale  2057
+ Server  PRDSDCAPP42301.EMEA.ADSINT.BIZ
+ Project TNT004
+ Port    0
+ 
+ 
+ how to add ajure ad  group with java 
+ 
+ 
+ can we ge
+ 
+ When the MSTR
+ 
+ )P(O8i7u6y
+ 
+ LDAP-SYNC
+ AD-MOL-RS
+ exec prc_usr-auth.sync_ldap_user('382759', null);
+ 
+once the stored procedure has been executed, 
+it will go to mol and mol will generate and put the json request into toRobotQueue and then robot will pick from the schedulre
+ 
+delete robot for user sync and delete robot for ldap, both are same
+ 
+all the updated dtata has been updated from active directery to usrusr table and then V-ldap with the help of pipeline
+ 
+the flow diagrame has to change for ldap synch, which is wrong currently
+ 
+ 
+ 
+ 
+ 
+server.ssl.key-alias=enterrobotdev
+server.ssl.key-store-password=caKoS1axicR$
+server.ssl.key-store=classpath:enterrobotdev.emea.adsint.biz.pfx
+server.ssl.key-store-provider=SUN
+server.ssl.key-store-type=JKS
+
+19. Can we disable the default web server in the Spring boot application?
+Yes, we can use application.properties to configure the web application type i.e spring.main.web-application-type=none.
+
+
+
+
+18002668899
+022 68129010
+
+
+This request fails with error: Hostname/IP does not match certificate's altnames.
+ This is expected since bar.com is not in the alternate name list of the server cert. 
+ It is possible that the certificate you are using is self-generated instead of Node's trusted certificate authorities. 
+ This could cause the Could not get any response error in Postman.
+ 
+
+ 2. Adding certificate to the Java truststore
+This is a simple step, go to <JRE_HOME>/bin and execute the below command:
+
+keytool -import -alias alias -keystore ../lib/security/cacerts 
+      -file mycertificate.cer
+Enter the default keystore password 'changeit'(changeme on Mac) for the prompt 'Enter keystore password:'.
+Then enter 'yes' for the prompt 'Trust this certificate? [no]:' and press enter key.
+
+If everything goes well, you will get a message 'Certificate was added to keystore' 
+which confirms your certificate is added to the Java truststore successfylly!
+
+
+
+
+
+<JAVA_HOME>/bin/keytool -importcert -alias <server_name> -keystore <JAVA_HOME>/lib/security/cacerts -file public.crt
+
+keytool -import -alias enterrobot -keystore <JAVA_HOME>/lib/security/cacerts -file enterrobot
+
+ 
+ 
+ Whenever your application attempts to connect to another application over SSL (e.g.: HTTPS, IMAPS, LDAPS), it will only be able to connect
+ to that application if it can trust it. The way trust is handled in the Java world (this is what your application is written in) is that 
+ you have a "truststore" file (typically $JAVA_HOME/lib/security/cacerts). This truststore file contains trusted 
+ certificates and Java uses this to determine if the SSL certificate used by another application can be trusted.  
+ Java will only trust certificates that are signed by a Certificate Authority (CA) whose certificate is in the truststore, 
+ or public certificates that are added to the truststore. For example, if we look at the certificate for Atlassian:
+
+
+
+We can see the *.atlassian.com certificate has been signed by the intermediate certificates, 
+DigiCert High Assurance EV Root CA and DigiCert High Assurance CA-3.
+These intermediate certificates have been signed by the root Entrust.net Secure Server CA.
+ Those three certificates combined are referred to as the certificate chain. 
+ Because the three CA certificates are within the Java truststore file (cacerts), 
+ Java wil. 
+ Alternatively, if the *.atlassian.com certificatel trust any certificates signed by them (in this case, *.atlassian.com) was in the truststore, Java would also trust that site.
+
+This problem comes from a certificate that is either self-signed (a CA did not sign it) or the certificate chain does not exist within the Java truststore.
+ Subsequently, your application doesn't trust the certificate and fails to connect to the application.
+
+
+keytool -list -keystore ./cacerts
+
+
+keytool -delete -alias enterrobot -keystore "E:\Program Files (x86)\Java\jdk-11\lib\security\cacerts" -storepass changeit
+
+
+keytool -import -alias enterrobotdev -keystore "E:\Program Files (x86)\Java\java-1.8.0.252\jre\lib\security\cacerts" -file enterrobotdev.emea.adsint.biz.pfx
+keytool -import -alias enterrobot.emea.adsint.biz -keystore "E:\Program Files (x86)\jdk-11\lib\security\cacerts" -file enterrobot.emea.adsint.biz.crt
+keytool -import -alias enterrobotdev.emea.adsint.biz -keystore "E:\Program Files\Java\java-1.8.0.252\jre\lib\security\cacerts -file enterrobotdev.emea.adsint.biz.crt
+Spring-boot-starter-artemis	It is used for JMS messaging using Apache Artemis.
+
+
+how we are managing session in robot application
+what dependency we are using for session in robot
+com.oracle.ojdbc
+org.postgresql
+
+[4:15 PM] Madhusudhana Rao Kommi
+Fv9pvh$-*RLA
+fv9pvh$-*RLH
+
+16WheelerTruck!
+kommimad
+JohnnySins@786
+keytool -import -alias enterrobot -keystore "E:\jainjum\certification\cert" -file enterrobot.emea.adsint.biz.crt
+ 
+ 
+ E:\jainjum\PowerBI\robot--mol003
+ 
+ 
+ 
+
+We have review the issue with Shrey and sent an email to the fortanix team with our observation,
+
+https://jenkins.tools.adidas-group.com/dnabi/job/Enter/job/KMS/job/KMS_Code_Quality_Pipeline/configure
+https://tools.adidas-group.com/jenkins/job/ENTER/job/KMS/job/KMS_Code_Quality_Pipeline/configure
+
+
+Robot
+verification:-
+1.connection with MSTR env should be there (enter-user admi should enable)
+2.KMS credintail should be there in KMS-test DB
+3.TNT's password should be there in the kms-test.
+4.TNT configuration should be there in the mol(Including lifecycle/vm/cloned from)
+5.all the possible user should be there (which we can create through aspen also/scriptcode/),
+else we can have the test user so we do not need to change the users again and again
+Code implementation-
+
+Migration utility: 
+
+
+
+The great thing is, if you're using Eureka and Feign, then load balancing comes for free.
+This is client-side load balancing and this comes for free for you.
+
+
+composit key
+
+Now, understand this concept with an example for better understanding. Suppose you are handling the data of the employees of a company and you want to search for an employee named Rahul with his name in your database. But in such cases of searching by name, there is a high possibility that more than one employee shares the same name. This happened in this case, too. You ran into multiple employees that share the name, Rahul. Now to overcome this issue, since you already know that the employee numbers are always unique, you can optimize your search by considering the name column along with the column of employee number as a single column. This scenario is one of the use cases of Composite keys. 
+
+
+Aspect Oriented Programming (AOP) compliments OOPs in the sense that it also provides modularity. But the key unit of modularity is aspect than class.
+AOP breaks the program logic into distinct parts (called concerns). It is used to increase modularity by cross-cutting concerns.
+A cross-cutting concern is a concern that can affect the whole application and should be centralized in one location in code as possible, such as transaction management, authentication, logging, security etc
+
+https://www.youtube.com/watch?v=WZLTwbeENGs
+
+Spring JPA
+
+Lets search for Gateway and this is the sprinklered routing gateway.
+It provides a simple yet effective way to allow to apps.
+It helps you implement crosscutting concerns such as security, monitoring, matrix and resiliency.
+
+Docker
+
+
+we got a quick overview of a few concepts related to Docker. Let's do a quick review of what we have discussed
+until now. When we execute the command, the image is downloaded from something called Docker Hub. Docker Hub is something called a Docker registry.
+
+A registry contains a number of repositories.
+When we are specifying the name in here, it's actually name of one of the repositories and we are specifying
+which version, which tag of that repository to get
+and once we specify that, we saw that the image was downloaded and run.
+
+The running version of the image is called a Container.
+
+A image is a static version and the running dynamic version of it is called a Container
+
+and at the end, we also saw that we had to publish the container port to a host port to be able to
+
+access the application.
+
+TO check what all the containers are running(and stopped too).
+Docker container ls -a
+
+
+to runn the image (it says container)
+Docker run -p 5000:5000 -d in28min/todo-rest-api-h2:1.0.0.RELEASE
+
+another instanse of same image 
+Docker run -p 5001:5000 -d in28min/todo-rest-api-h2:1.0.0.RELEASE
+
+
+always re-start when you restart docker
+Docker run -p 5001:5000 -d --restart=always in28min/todo-rest-api-h2:1.0.0.RELEASE
+
+
+Docker container run -p 5001:5000 -d in28min/todo-rest-api-h2:1.0.0.RELEASE
+
+
+docker logs -f 38155
+
+
+docker images
+
+docker container stop id
+
+
+
+Docker architecture 
+the commands in is called a Docker client
+
+221585
+EnterPlatformWIN
+and when we type something in the Docker client, the command is sent out to something called a Docker
+
+Daemon or a Docker engine for execution.
+
+So, even the local installation of Docker uses a client-server kind of architecture.
+
+So, when we install Docker Desktop, we were installing both the Docker Client and the Docker Daemon.
+
+The Docker Daemon is responsible for managing the containers,
+
+it's responsible for managing the Local Images, and it is responsible for pulling something from the
+
+Image Registry if you'd need it or pushing a locally created image to a Image Registry.
+
+The first two parts of that is very easy, right?
+
+Docker Daemon is responsible for Containers and Local Images
+
+
+The Docker Daemon is responsible for managing the containers,
+
+it's responsible for managing the Local Images, and it is responsible for pulling something from the
+
+Image Registry if you'd need it or pushing a locally created image to a Image Registry.
+
+
+So, the Docker Daemon is responsible for managing our local stuff and also pulling something from the image repository
+
+One of the additional capabilities that Docker Daemon has is, it can process instructions to create images
+
+as well.
+
+docker tag existing_name_with_path latest_name
+
+docker pull -just download from registry to local
+
+Docker image history image-id
+
+docker image inspect id_name
+
+Docker image remove image_id(from local) not form registry
+
+
+Docker container prune to remove all the stop container
+
+
+
+Docker run -p 9411:9411 openzipkin/zipkin:2.23
+
+Docker-compose up
+
+https://github.com/in28minutes/spring-microservices-v2/tree/main/04.docker
+
+A composite key is made by the combination of two or more columns in a table that can be used to uniquely identify each row in the table when the columns are combined uniqueness of a row is guaranteed, but when it is taken individually it does not guarantee uniqueness, or it can also be understood as a primary key made by the combination of two or more attributes to uniquely identify every row in a table. 
+
+A developer builds an image and you can run the same image wherever a container runtime is installed.
+
+You can run it on your local machine, in your enterprise data center, or in the cloud. Docker
+
+enables standardization of how you package and deploy your application, irrespective of the language
+
+or framework which is used to build the application or the platform where you would want to deploy the
+
+application to.
+
+
+2. default and static methods in Interfaces
+If you read forEach method details carefully, you will notice that it’s defined in Iterable interface but we know that interfaces can’t have a method body. From Java 8, interfaces are enhanced to have a method with implementation. We can use default and static keyword to create interfaces with method implementation. forEach method implementation in Iterable interface is:
+
+default void forEach(Consumer<? super T> action) {
+    Objects.requireNonNull(action);
+    for (T t : this) {
+        action.accept(t);
+    }
+}
+We know that Java doesn’t provide multiple inheritance in Classes because it leads to Diamond Problem. So how it will be handled with interfaces now since interfaces are now similar to abstract classes?
+
+The solution is that compiler will throw an exception in this scenario and we will have to provide implementation logic in the class implementing the interfaces
+
+Java Date Time classes are not defined consistently, we have Date Class in both java.util as well as java.sql packages. Again formatting and parsing classes are defined in java.text package.
+
+java.util.Date contains both date and time values whereas java.sql.Date contains only date value. Having this in java.sql package doesn’t make any sense. Also, both the classes have the same name, which is a very bad design itself.
+
+There are no clearly defined classes for time, timestamp, formatting, and parsing. We have java.text.DateFormat abstract class for parsing and formatting need. Usually, the SimpleDateFormat class is used for parsing and formatting.
+
+All the Date classes are mutable, so they are not thread-safe. It’s one of the biggest problems with Java Date and Calendar classes.
+Date class doesn’t provide internationalization, there is no timezone support. So java.util.Calendar and java.util.TimeZone classes were introduced, but they also have all the problems listed above.
+
+Deadlock and how to avoid
+Deadlock in Java is a part of multithreading. Deadlock can occur in a situation when a thread is waiting for an object lock, that is acquired by another thread and second thread is waiting for an object lock that is acquired by first thread. Since, both threads are waiting for eachother  to release the lock, the condition is called deadlock
+
+How to Avoid Deadlock in Java?
+Deadlocks cannot be completely resolved. But we can avoid them by following basic rules mentioned below:
+
+Avoid Nested Locks: We must avoid giving locks to multiple threads, this is the main reason for a deadlock condition. It normally happens when you give locks to multiple threads.
+Avoid Unnecessary Locks: The locks should be given to the important threads. Giving locks to the unnecessary threads that cause the deadlock condition.
+Using Thread Join: A deadlock usually happens when one thread is waiting for the other to finish. In this case, we can use join with a maximum time that a thread will take.
+
+ a singly linked list
+
+is best used when you want to insert and remove items
+
+from the front of the list.
+
+in the list is zero but there's another way
+
+to test whether a list is empty.
+
+Can you think about what that way is
+
+if we looked at the linked list implementation for a minute?
+
+Can you come up with another way,
+
+a quick way of testing whether a linked list is empty?
+
+If head is null, that means the list is empty, right?
+
+'Cause head is null.
+
+It's not pointing to any nodes.
+
+
+which is good for what
+
+So, one way we could write an isEmpty method
+
+an array or a list will depend
+
+on what your application wants to do.
+
+If it wants to do a bunch of random accesses,
+
+then a linked list would be a bad choice
+
+'cause you're always gonna have to be traversing the list
+
+to get to whatever you want to access
+
+but if you want to load a bunch of data
+
+into the list and you're always gonna be most interested
+
+in whatever's at the front of the linked list,
+
+then that could be a really good choice,
+
+a linked list could be a good choice
+
+for data structure depending
+
+on what else your application
+
+is going to wanna do with the data.
+
+So, this is a simple implementation
+
+of a singly linked list
+
+just to give you an idea of what would be going on
+
+under the covers in a linked list implementation..
+
+Access
+ArrayList is faster in storing and accessing data.
+LinkedList is faster in manipulation of data.
+programe to find the words in sentence.
+@Transactional
+Spring bean scope
+JPA
+Composit key
+Hibernate
+Statement
+Spring security
+@Transactional
+2887440985
+
+15) What are the different strategies used in Microservices deployment?
+Following strategies are used in Microservices deployment:
+
+Multiple Service Instance per Host: It is used to run single or multiple service instances of the application on a single or multiple physical/virtual hosts.
+Service Instance per Host: It is used to run a service instance per host.
+Service Instance per Container: It is used to run each service instance in its respective container.
+Serverless Deployment: It packages the service as a ZIP file and uploads it to the Lambda function. The Lambda function is a stateless service that automatically runs enough micro-services to handle all requests.
+
+20) What is the use of PACT in Microservices architecture?
+PACT is an open-source tool used for testing interactions between service providers and consumers. It increases the reliability of the Microservices applications.
+
+===========================
+
+SSL – stands for Secure Sockets Layer. It is the industry standard protocol for keeping an internet connection secure by safeguarding all sensitive data that is being sent between two systems, preventing hackers from reading and modifying any information transferred.
+
+TLS – (Transport Layer Security) is an updated, more secure, version of SSL. It adds more features. Today, certificates provided by certificate authorities are based on TLS only. But regarding secured communication over network, the term SSL is still common as it is the old and just become popular among community.
+
+HTTPS – (Hyper Text Transfer Protocol Secure) appears in the URL when a website is secured by an SSL certificate. It is the secured version of HTTP protocol.
+
+Truststore and Keystore – Those are used to store SSL certificates in Java but there is little difference between them. truststore is used to store public certificates while keystore is used to store private certificates of client or server.
+
+to create the certificate:
+keytool -genkey -alias selfsigned_localhost_sslserver -keyalg RSA -keysize 2048 -validity 700 -keypass changeit -storepass changeit -keystore ssl-server.jks
+
+how to connect Spring cloude with git repo:
+
+Spring.cloud.config.server.git.uri= path of git file
+
+
+JDBC/Spring JDC/JPA
+The problem with queries is when the relationships between tables change then you have to modify
+
+all your queries. I have worked in lot of applications where there were a lot of big big queries which were
+
+written. Like, I have worked in applications where there were queries of hundred two hundred lines of code and
+
+understanding these and maintaining these is a really tough job. You need to really have a great understanding
+
+of how things are done in the database to be able to write these queries.
+
+And that's the real problem.
+
+The problem was the queries were becoming so complex that it was difficult to really maintain them.
+
+And whenever there were changes in the relationships between tables it was really becoming difficult
+
+to maintain these queries. That’s the world where JPA stepped in. In the next
+
+video we will look at how JPA tries to solve this problem.
+
+JPA expects a default constructor.
+1
+
+In Java if you define no constructors at all, you'll get a default constructor, which is public and zero-args, i.e. it meets the requirements of the JPA spec.
+
+But if you do define any other constructors, the default constructor is not added automatically, and so the class doesn't meet the JPA requirements. You'd have to add the zero-arg constructor explicitly, next to any other constructors you would want.
+
+As to why the JPA spec needs it: it needs a zero-arg constructor as it wouldn't know what values to pass to the parameters in other constructors.
+
+
+
+
+how to connect service to eureka namin serverAll that we needed to do was very, very simple thing, add a dependency.
+
+So, add Eureka client dependency and that's all is needed for you to connect with Eureka.
+
+However, I would want to be really, really safe.
+
+So, I'd typically actually configure the URL directly in the application.properties. So, we can configure the
+
+naming
+
+server URL in the application.properties as well.
+
+So, I'm opening up the application.properties in currency-exchange-service and configure eureka.
+
+client.service
+
+Url.defaultZone=
+
+this URL
+
+/eureka. So, eureka.client.serviceUrl.defaultZone=localhost:
+
+8761/eureka. When you save this,
+
+this would also
+
+register with Eureka again, and when you refresh, you should see that everything is fine. So, it's just
+
+the same. Even though this is the default URL, later, we might want to connect to other Eureka
+
+servers and having this property here would be really, really clear.
+
+
+
+client side load balancing
+
+for lord balancer, you'd see that there is a load balancer, spring-cloud-starter-loadbalancer,
+
+which is brought into the class path by spring-cloud-starter-netflix-eureka-client
+
+and this is the load balancer framework that is used by feign to actually distribute the load
+
+among the multiple instances which are returned by Eureka. In the earlier versions of Spring Cloud, the
+
+load balancer which was used was Ribbon
+
+and in the recent versions, Spring Cloud shifted to using Spring Cloud Load Balancer as the load balancer.
+
+The great thing is, if you're using Eureka and Feign, then load balancing comes for free.
+
+This is client-side load balancing and this comes for free for you.
+
+What I would r
+
+
+
+API Gateway
+
+And these micro services have a lot of common features authentication, authorization, logging rate
+
+limiting.
+
+Where do you implement all these common features?
+
+That's one of the typical questions in a micro series architecture.
+
+And the typical solution is to go for an API gateway in the older versions of Spring Cloud, the popular
+
+API gateway to use was Zul.
+
+Since Zul one is no longer supported by Netflix, Sprinklered has moved on and now the recommended option
+
+as an API gateway spring cloud gateway.
+
+
+
+You should create a custom bridged network, which will allow you to refer to the containers by name. And there is no need to publish the ports if you are only talking internally.
+
+# create network
+docker network create -d bridge mynet
+# container 1
+docker container run --network mynet --name container1 -d image_name
+# container 2
+docker container run --network mynet --name container2 -d some_other_image_name
+The IP in code snippet can then be replaced with the name of the other container
+
+RestTemplate restTemplate = new RestTemplate();
+ResponseEntity<Boolean> isUp = restTemplate.getForEntity("http://container2:2002/apis/test",Boolean.class)
+
+
+
+49) What is Eureka in Microservices?
+Eureka or Eureka Server is an application that holds the information about the client-service applications. Microservices have to register into the Eureka server, and the Eureka server knows all the client applications running on each port and IP address. Eureka Server is also alternatively known as the Netflix Service Discovery Server. It uses Spring Cloud and is not heavy on the application development process.
+
+3
+
+Alternately, you can also link the two containers together by --link. Assuming you want container1 as client to container2, you can use below:
+
+sudo docker run --link container2 --name=container1 -d image_name
+
+
+Bean scope
+Cannot be thread safe, precisely because just one instance is created, so every request(thread) will use the very same instance, so concurrency issues may happens.
+
+If for example your scope is prototype, Spring wont use singleton and then it will create an instance per getClass invokation.
+
+Same thing for request or session, instance will be created by request or per user session.
+
+As a rule, use the prototype scope for all state-full beans and the singleton scope for stateless beans.
+
+
+
+
+StackOvrflow error:
+The java.lang.stackoverflowerror – StackOverflow Error in Java is thrown to indicate that the application’s stack was exhausted, due to deep recursion. The StackOverflowError extends the VirtualMachineError class, which indicates that the JVM is broken, or it has run out of resources and cannot operate.
+
+n amidst of this process, if JVM runs out of space for the new stack frames which are required to be created, it will throw a StackOverflowError. For example: Lack of proper or no termination condition. This is mostly the cause of this situation termed as unterminated or infinite recursion. .
+
+Break statement can only be used with loop or switch. So, using break with if statement causes “break outside switch or loop” error.
+
+The functional interface also known as Single Abstract Method Interface was introduced to facilitate Lambda functions. Since a lambda function can only provide the implementation for 1 method it is mandatory for the functional interface to have ONLY one abstract method. For more details refer here.
+
+Spring IoC container is responsible for instantiating, wiring, configuring, and managing the entire life cycle of objects. BeanFactory and ApplicationContext represent the Spring IoC Containers.
+
+
+The word SOLID acronym for:
+
+Single Responsibility Principle (SRP)
+Open-Closed Principle (OCP)
+Liskov Substitution Principle (LSP)
+Interface Segregation Principle (ISP)
+Dependency Inversion Principle (DIP)
+
+1. What is Externalization in Java?
+In serialization, the Java Virtual Machine is totally responsible for the process of writing and reading objects. This is useful in most cases, as the programmers do not have to care about the underlying details of the serialization process. However, the default serialization does not protect sensitive information such as passwords and credentials, or what if the programmers want to secure some information during the serialization process?
+Thus externalization comes to give the programmers full control in reading and writing objects during serialization.
+
+
+When you want to control the process of reading and writing objects during the serialization and de-serialization process, have the object’s class implemented the java.io.Externalizable interface. Then you implement your own code to write object’s states in the writeExternal() method and read object’s states in the readExternal() method. These methods are defined by the Externalizableinterface as follows:
+writeExternal(ObjectOutput out): The object implements this method to save its contents by calling the methods of DataOutput for its primitive values or calling the writeObject method of ObjectOutput for objects, strings, and arrays.
+ 
+readExternal(ObjectInput in): The object implements this method to restore its contents by calling the methods of DataInput for primitive types and readObject for objects, strings and arrays.
+
+why only one abstract method in functional interface 
+
+The functional interface also known as Single Abstract Method Interface was introduced to facilitate Lambda functions. Since a lambda function can only provide the implementation for 1 method it is mandatory for the functional interface to have ONLY one abstract method. 
+
+
+JVM
+
+It stands for Java Virtual Machine
+
+JVM is responsible for converting byte code into machine specific code because of which we have different JVM for different Operating system, like different JVM for Windows, Linux or Solaris.
+
+But all the JVMs understand the byte code given to it no matter from which machine the byte code got created. This makes Java platform independent.
+
+JVM also provides several paramount features including Memory Management, Garbage Collection, Security etc..
+
+we can Customize the JVM by using Java options.
+
+We can allocate maximum and minimum memory for Heap residing in JVM.
+
+JVM is Virtual because it does not exist physically, we can’t install JVM as it comes with JRE.
+
+
+It stands for Java Runtime Environment
+
+It is the implementation of JVM, it physically exists, and hence we can install JRE.
+
+It provides the platform to execute/run the java programs.
+
+It consists of JVM and other libraries like rt.jar which are required to execute the Java program.
+
+We can run any Java program using JRE but we can’t compile the java code using JRE as it does not contain any compiler, debugger etc..
+
+We can see JRE installed in many places like Broswers,TV,Mobile,set-top boxes and most of the electronic gadgets.
+
+JRE in these places uses the JVM and executes the byte code provides in the form of JA
+
+
+JDK
+
+It stands for Java Development Kit and it physically exist and we can install it.
+
+It contains JRE + Development tools like compiler, debugger etc.
+
+Since it contains JRE along with compiler, we can write java code and compile the java code.
+
+Similar to JRE, JDK is also platform specific, we need to use separate JDK for different Operating system like Windows, Linux etc.
+
+All the libraries like Java,Javac etc exist inside the bin folder of JDK installed path.
+
+
+@SpringBootApplication=@ComponentScan+@EnableAutoConfiguration+@Configuration
+
+
+complexity 
+And so what we do is we look at the number of steps
+that it takes to execute an algorithm.
+And we call this the time complexity.
+There are two types of complexity:
+there's time complexity which is the number
+of steps involved to run an algorithm;
+and then there is memory complexity which is the amount
+of memory it takes to run an algorithm.
+
+O of log N which logarithmic time complexity,
+
+and that's log to the base two not log to the base 10.
+
+So it's log to the base two N.
+
+O of N which is linear time complexity.
+
+And then we have O of N log N
+
+which is N times log to the base two N,
+
+and that's N log star N time complexity.
+
+And we have O of N squared
+
+which is quadratic time complexity.
+
+and so selection sort will usually perform better than bubble sort. However, selection sort is an unstable algorithm
+
+
+InsertationSort algo
+I've added the usual array and code to print the array.
+And this implementation doesn't need the swap method.
+We don't swap, we shift elements.
+And so I have not added the swap method
+because we don't need it.
+
+
+So we're going to swap the largest element
+
+that we found in the unsorted partition
+
+and that's at position four with the last element
+
+in the unsorted partition and that's at position six.
+
+So what we're gonna do is swap 55 and minus 22
+
+and we have now completed our first traversal.
+
+https://10.146.50.8:8445/v1/inactive/user/intimation?moduleName=ALL&inactiveParam=intimation
+https://10.146.50.4:443/v1/inactive/user/deactivation?moduleName=TNT&rerun=no&inactiveParam=deactivation
+
+
+
+
+AKIAUCQX5OF4KULTQM4S
+
+AKIAUCQX5OF4KULTQM4S
+
+
+Possible Solutions
+The above two problems are pretty crucial while designing and building microservice based applications. To address them the following list of approaches have been described:
+
+Two-Phase Commit
+
+As the name suggests, this way of handling transactions has two stages, a prepare phase and a commit phase. One important participant is the Transaction Coordinator which maintains the lifecycle of the transaction. 
+
+Eventual Consistency and Compensation / SAGA
+
+The saga pattern is a way to manage distributed transactions across microservices. The key phase of that process is to publish an event that triggers local transactions. Microservices exchanges such events through a message broker. It turns out that Kafka Streams may help us here.
+
+What is a distributed transaction?
+Transactions that span over multiple physical systems or computers over the network, are simply termed Distributed Transactions. In the world of microservices a transaction is now distributed to multiple services that are called in a sequence to complete the entire transaction.
+
+
+Property	Responsibility for maintaining properties
+Atomicity	Transaction Manager
+Consistency	Application programmer
+Isolation	Concurrency Control Manager
+Durability	Recovery Manager
+
+
+class Test  
+{  
+static int var=5;  
+}  
+In the above example, assume that two threads are working on the same class. Both threads run on different processors where each thread has its local copy of var. If any thread modifies its value, the change will not reflect in the original one in the main memory. It leads to data inconsistency because the other thread is not aware of the modified value.
+
+Using Volatile force a thread to read and write Variables directlty from RAM memory
+
+oauth2 is not meant for authentication rather;, it is used for authorization, Also, the primary function of oauth2 is to authorize the user
+
+to enable auth 2.0
+
+<dependency>
+	<groupId>org.springframework.security.oauth</groupId>
+	<artifactId>spring-security-oauth2</artifactId>
+	<version>2.4.0.RELEASE</version>
+</dependency>
+
+This dependency will add all the prerequisite to use Oauth2 features for our application. The next step is to add some configurations for our application. Add the following entry to the src/main/resources/application.properties file:
+
+user.oauth.clientId=javadevjournal
+user.oauth.clientSecret=1234$#@!
+user.oauth.redirectUris=http://localhost:8081/login
+user.oauth.user.username=javadevjournal
+user.oauth.user.password=javadevjournal
+user.oauth.accessTokenValidity=300
+user.oauth.refreshTokenValidity=240000
+
+
+[pullquote align=”normal”]Change these values as per your requirement. [/pullquote]
+
+Above configurations set the values that authorization server will use during the setup (You can always use the DB to store these values.). To activate the authorization server, add the add @EnableResourceServer annotation.
+
+@SpringBootApplication
+@EnableResourceServer
+public class SpringBootAuthServerApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(SpringBootAuthServerApplication.class, args);
+    }
+}
+
+Client – The client Id registered with the auth server. We are defining it using the application.properties file.
+
+What is a client_ID and Client_Secret?
+While the client still uses a username and password (called the client_id and client_secret ), instead of sending them directly to the API service on each request they are instead exchanged for a token via an authorization server. The authorization server returns a temporary access token (which is used until it expires)
+
+
+Do we need to generate clientId and clientSecret for each microservices for handling security in inter-service communication.
+
+You don't need both. There are many different OAuth grant types, and many of them do not require the client_secret.
+
+Using the client secret is recommended for server-side apps (where the end user does not have access the client secret) because it is more secure. It is not recommended for client-side apps; those apps can be decompiled, thus leaking the client_secret.
+
+
+Scope – Scope of the client application. This shows what access we give for the client application. If scope is undefined or empty (the default) the client is not limited by scope.
+
+authorizedGrantTypes – Grant types for the client to use. Default value is empty.
+
+authorities – Authorities granted to the client (regular Spring Security authorities).
+
+redirectUris – redirects the user-agent to the client’s redirection endpoint. It must be an absolute URL.
+
+Token Validity – Last 2 configuration set the access and refresh token validity.
+
+
+
+
+Spring Securcity default behaviour
+
+Adds Mandatory authenticate default behaviour 
+ Handels login error
+ 
+Spring security generate a new password everytime you start the app by adding starter.security dependency in pom.xml
+
+
+
+Creates user and password by putting below properties in application.properties 
+ 
+Spring.security.user.name=foobar
+
+Spring.security.user.password=foobar
+ 
+ 
+To configure Spring security Authentication
+
+
+create class SecurityConf which extends WebSecurityConfigurerAdapter
+and override void Configure method which takes argument as Authentication manager builder which we can do inmemoryAuth
+ 
+ 
+To Configure Spring security authentication- have to  
+override void Configure method which takes argument as HTTP security and define the usr's for all/user/admin and provide authorization.
+
+07422408585
+
+class TestStringConcatenation2{  
+ public static void main(String args[]){  
+   String s=50+30+"Sachin"+40+40;  
+   System.out.println(s);//80Sachin4040  
+ }  
+}  
+Note: After a string literal, all the + will be treated as string concatenation operator.
+
+The feature of AWS lambda 
+
+https://help.acloud.guru/hc/en-us/sections/360000271216-Cloud-Playground?_ga=2.203277784.852121481.1659348446-1682460495.1651928163
+
+
+
+Canara rebboca 
+ Parag parikh
+ 
+ 2 multi cup mutual funds
+ 
+ Reliance
+ HDFC
+ TCS
+ Infosys
+ all weather small case
+ 
+ Course Name
+
+ACloudGuru Link
+
+Building and deploying cloud native applications on AWS
+
+Introduction to AWS
+
+https://learn.acloud.guru/course/intro-to-aws/overview
+
+AWS CLI: Getting Started
+
+https://learn.acloud.guru/series/acg-fundamentals/view/1164062a-4271-8a90-fa22-e0fd52a2b92b
+
+AWS Developer Associate
+
+https://learn.acloud.guru/course/aws-certified-developer-associate/overview
+
+Introduction to RDS
+
+https://learn.acloud.guru/course/aws-rds/overview
+
+Serverless Concepts
+
+https://learn.acloud.guru/course/94e427e8-ef0a-4d15-9994-75d75da1fa37/overview
+
+Mastering AWS CloudFormation
+
+https://learn.acloud.guru/course/mastering-aws-cloudformation/overview
+
+AWS Developer Tools Deep Dive
+
+https://learn.acloud.guru/course/8803c4a3-aaca-4051-9632-e6a765fbd391/overview
+
+EKS Basics
+
+https://learn.acloud.guru/course/eks-basics/overview
+
+Building a Full-Stack Serverless Application on AWS
+
+https://learn.acloud.guru/course/871c7714-6ba7-46f9-9458-b60c779e5a18/overview
+
+
+
+Course Name
+
+ACloudGuru Link
+
+Building and deploying cloud native applications on Azure
+
+Introduction to Azure
+
+https://learn.acloud.guru/course/introduction-to-azure/overview
+
+AZ-900 Microsoft Azure Fundamentals
+
+https://learn.acloud.guru/course/az-900-microsoft-azure-fundamentals/overview
+
+Azure CLI Essentials
+
+https://learn.acloud.guru/course/6bc393e8-5fd6-440a-8b13-e76375a2021f/overview
+
+Getting Started with PowerShell
+
+https://learn.acloud.guru/course/getting-started-with-powershell/overview
+
+AZ-204: Developing Solutions for Microsoft Azure
+
+https://learn.acloud.guru/course/az-204-developing-solutions-for-microsoft-azure/overview
+
+Azure Cosmos DB Deep Dive
+
+https://learn.acloud.guru/course/azure-cosmos-db-deep-dive/overview
+
+AKS Deep Dive
+
+https://learn.acloud.guru/course/be691f2f-2fa5-40ed-8803-5d75be9cc238/overview
+
+Introduction to Azure DevOps
+
+https://learn.acloud.guru/course/introduction-to-azure-devops/overview
+
+Build and Deploy Azure Templates
+
+https://learn.acloud.guru/course/f3ff74be-29f9-4dcd-b97a-4903b232936f/overview
+
+Stream API
+
+
+ What will happen if we put a key object in a HashMap which is already there?The key point here is ordering, if you acquire resources in a particular order and release resources in the reverse order you can prevent deadlock. 
+ 
+ 
+ C3 – Minimum 5yrs (4.5 + for niche skills is fine ex, GCP, true FSE etc)
+
+C4 – Minimum 7.5yrs
+
+C5 – Minimum 10yrs
+
+
+Rahul Saldi-13:26
+Q:Any links for Amazon Cloudfront?
+Ishaq Polan-13:32
+A:https://www.youtube.com/watch?v=AT-nHW3_SVI
+Madhan babu Kutti gunasekaran-13:26
+Q:May i know what is amazon cloud front?
+Ishaq Polan-13:32
+A:https://www.youtube.com/watch?v=AT-nHW3_SVI
+Kush Maheshwari-13:27
+Q:will be able to finish y 4 ?
+Ishaq Polan-13:33
+A:I shall surely try to wrap up by 4 or 4:15 max
+Abhilash Khedkar-13:27
+Q:If I have customer base presence across multiple regions, do I need to create the same service multiple time for multiple regions or is there any provision for clubbing the regions together and create only one service?
+Ishaq Polan-13:35
+A:https://aws.amazon.com/premiumsupport/knowledge-center/copy-ami-region/
+
+
+
+https://aws.amazon.com/certification/certified-cloud-practitioner
+
+
+ipolan@amazon.com
+
+
+ipolan@amazon.com
+Karthik Kumar Kirubapuri-16:20
+Q:practice papers - https://explore.skillbuilder.aws/learn/catalog?ctldoc-catalog-0=l-_en%7Ese-Question
+Ishaq Polan-16:21
+A: practice papers - https://explore.skillbuilder.aws/learn/catalog?ctldoc-catalog-0=l-_en%7Ese-Question
+Loraine Peart-16:21
+Q:in terms of the pre-requisite...this course helped to fulfill the 6 month requirement and prior IT experience? do you recommend 1 month prep after today for a newbie?
+Ishaq Polan-16:23
+A:https://youtube.com/playlist?list=PLVENt3LU1wkewg7hwtH3RvL494t15WJFq
+
+Why AWS Elastic Beanstalk?
+Elastic Beanstalk is a service for deploying and scaling web applications and services. Upload your code and Elastic Beanstalk automatically handles the deployment—from capacity provisioning, load balancing, and auto scaling to application health monitoring.
+
+DAX is used to reduce response times from a DynamoDB table from single-digit milliseconds to microseconds. DynamoDB tables cannot host static websites.
+
+Route 53 is a highly available and scalable DNS web service. The three main functions of Route 53 are registering domain names, routing internet traffic to the resources for your domain, and checking the health of those resources. Route 53 can direct traffic to S3 buckets. But because the question describes only one S3 bucket, Route 53 would have only one potential route and could not reduce latency.
+
+ CloudFront is a web service that speeds up the distribution of your static and dynamic web content, such as .html, .css, .js, and image files, to your users. Content is cached in edge locations. Content that is repeatedly accessed can be served from the edge locations instead of the source S3 bucket.
+ 
+ AWS Trusted Advisor is an AWS tool that provides you real-time assistance to help you provision your resources following AWS best practices. It checks to help optimize your AWS infrastructure, provide better security and performance, reduce your overall costs, and also monitor service limits. Whether you want to develop applications, or as part of ongoing improvement, Always take advantage of the recommendations provided by Trusted Advisor it helps keep your solutions provisioned optimally.
+ Trusted Advisor checks for S3 bucket permissions
+ 
+ 
+ Correct. IAM roles are temporary credentials that expire. IAM roles are more secure than long-term access keys because they reduce risk if credentials are accidentally exposed.
+ 
+ Correct. A Region is a physical location where there are clusters of AWS data centers. AWS offers many different Regions where you can deploy infrastructure around the world. With the use of multiple Regions, you can achieve a global deployment of compute, storage, and databases.	
+ 
+ Correct. Amazon S3 supports Cross-Region Replication. With Cross-Region Replication, you designate a destination S3 bucket in another Region. When Cross-Region Replication is turned on, any new object that is uploaded will be replicated to the destination S3 bucket.
+ 
+  Consolidated billing is a feature of AWS Organizations. You can combine the usage across all accounts in your organization to share volume pricing discounts, Reserved Instance discounts, and Savings Plans. This solution can result in a lower charge compared to the use of individual standalone accounts
+  
+  Companies gain increased agility.
+
+Correct. With the AWS Cloud, you make IT resources available to developers in minutes instead of weeks. The result is reduced cost and time for development, which increases agility.
+
+
+Secure the physical infrastructure.
+
+Correct. AWS fully maintains the physical controls.
+
+CloudWatch monitors your AWS resources and the applications that you run on AWS in real time. You can use CloudWatch to monitor and receive alerts about console sign-in events that involve the AWS account root user.
+
+ QuickSight is a data visualization tool, not a tool for creating alarms.
+ rrect. You can monitor your estimated AWS charges by using CloudWatch. When you enable the monitoring of estimated charges for your AWS account, the estimated charges are calculated and sent several times daily to CloudWatch as metric data.
+ 
+ 
+ You use PrivateLink when you want to use services offered by another VPC securely within the AWS network. With PrivateLink, all network traffic stays on the global AWS backbone and never traverses the public internet. PrivateLink does not connect to on-premises operations.
+ 
+ 
+ AWS VPN establishes secure connections between your on-premises networks, remote offices, client devices, and the AWS global network. AWS VPN is not a dedicated connection.
+ 
+ A VPC endpoint enables private connections between your VPC and supported AWS services and VPC endpoint services powered by PrivateLink. A VPC endpoint does not connect to on-premises operations.
+ 
+ 
+ Correct. Amazon EFS provides an elastic file system that lets you share file data without the need to provision and manage storage. It can be used with AWS Cloud services and on-premises resources, and is built to scale on demand to petabytes without disrupting applications. With Amazon EFS, you can grow and shrink your file systems automatically as you add and remove files, eliminating the need to provision and manage capacity to accommodate growth.
+ 
+ 
+ Which AWS services or features support data replication across AWS Regions
+ 
+ Correct. You can use Amazon RDS to host relational databases on AWS. One RDS DB instance resides in a single Region. With Amazon RDS, you can create read replicas across Regions. Amazon RDS replicates any data from the primary DB instance to the read replica across Regions.
+ 
+ When the company retrieves the new API key, the company needs to store the key for use in future invocations of the REST endpoint. The company needs a secure solution that eliminates downtime while the company sets up the new API key.
+
+Which solution will meet these requirements?
+ 
+ Although SecureStrings are available in Parameter Store, you should use Secrets Manager to implement password rotation lifecycles
+ 
+ API key rotation (including third-party key rotation with a Lambda function) is available in Secrets Manager.
+ 
+ Incorrect. Although it is possible to store the API key in DynamoDB, this solution is not the most secure option. Anyone with access to the DynamoDB table would have access to the key.
+ 
+ 
+ A developer migrates a web application from an on-premises data center to the AWS Cloud. Authenticated customers use the application from many different clients simultaneously, including laptops, smartphones, and tablets. The application runs on Amazon EC2 instances behind an Application Load Balancer. The instances run in an Amazon EC2 Auto Scaling group. Upon initial testing, users report that they have to reenter information when they use the web application on their laptops and then switch to using their smartphones.
+
+Which solution will make the session state information persist across devices?
+
+Incorrect. The sticky session feature of the Application Load Balancer does not solve the problem across devices. Sticky sessions rely on a cookie that is not going to be consistent across devices.
+
+Correct. ElastiCache for Redis is a fast in-memory data store that provides sub-millisecond latency to power internet-scale applications in real time. The data will not be stored on the instance itself. This choice is ideal for ensuring that the session state information persists across devices.
+
+
+Which of the following are attributes of multiple Availability Zones in a given Region?
+
+AZs within a single Region are isolated but connected to each other through low-latency links.
+
+If 1 AZ goes out of service, the other AZs shouldn't be impacted.
+
+SaaS provides you access to full applications running on someone else's servers.
+
+CloudTrail tracks user activity and API calls in your account, which includes identity information (the user's name, source IP address, etc.) about the API caller
+
+
+SES allows you to send plaintext and HTML-formatted emails from your applications. It is ideal for marketing campaigns and professional emails.
+
+SNS allows you to send plaintext emails, text messages, and more from your applications.
+
+EFS is an elastic file system for Linux-based workloads.
+
+Amazon WorkSpaces allows you to host virtual desktops in the cloud.
+
+SNS allows you to send emails and text messages from your distributed applications.
+
+RDS allows you to set up relational databases in the cloud and provides you with several database engines to choose from, including Amazon Aurora, PostgreSQL, MySQL, MariaDB, Oracle Database, and SQL Server.
+
+Amazon Aurora is a MySQL- and PostgreSQL-compatible relational database engine.
+
+
+Which services allow you to run containerized applications without having to manage servers or clusters?
+
+Amazon Elastic Kubernetes Service (EKS)
+
+
+AWS Fargate
+
+Amazon Elastic Container Service (Amazon ECS)
+
+EKS lets you run your containerized Kubernetes applications on both Amazon EC2 and AWS Fargate.
+
+Fargate removes the need for you to interact with servers or clusters as it provisions, configures, and scales clusters of virtual machines to run containers for you.
+
+ECS lets you run your containerized Docker applications on both Amazon EC2 and AWS Fargate.
+
+
+Which service allows you to practice Infrastructure as Code by provisioning your AWS resources via scripted templates?
+
+Elastic Beanstalk is an orchestration service used to deploy and scale web applications on AWS.
+
+CloudFormation allows you to provision your AWS resources via scripted templates.
+
+
+Which migration service allows you to migrate databases to or within AWS over the internet easily and securely?
+
+AWS Database Migration Service (AWS DMS) helps you migrate databases to AWS quickly and securely over the internet. The source database remains fully operational during the migration, minimizing downtime to applications that rely on the database. The AWS Database Migration Service can migrate your data to and from the most widely used commercial and open-source databases.
+
+
+What data transport solution allows you to move petabytes of data and natively supports EC2 and Lambda?
+
+
+AWS Snowmobile is an Exabyte-scale data transfer service used to move extremely large amounts of data to AWS.
+
+Snowball Edge is a petabyte-scale data transport solution that natively supports EC2 and Lambda.
+
+Which method of accessing an EC2 instance requires both a private key and a public key?
+
+SSH allows you to access an EC2 instance from your local laptop using a key pair, which consists of a private key and a public key.
+
+Global Accelerator improves the availability of your applications by sending user traffic through AWS's global network.
+
+Redshift is a data warehouse solution that improves the speed and efficiency of accessing different datasets and has unlimited storage.
+
+KMS allows you to generate and manage encryption keys. The keys generated by KMS are managed by AWS.
+
+WAF helps protect your web applications from common web attacks, like SQL injection or cross-site scripting.
+
+Macie is a data privacy service that helps you uncover and protect your sensitive data, such as personally identifiable information (PII) like credit card numbers, passport numbers, social security numbers, and more.
+
+Organizations offers consolidated billing that provides 1 bill for all your AWS accounts. This also gives you access to volume discounts.
+
+5) B – Maintaining physical hardware is an AWS responsibility under the AWS shared responsibility model
+
+10) D – The AWS Acceptable Use Policy provides information regarding prohibited actions on the AWS 
+infrastructure.
+
+
+Streams
+ By using streams we can perform various aggregate operations on the data returned from collections, arrays, Input/Output operations.
+
+Example: Stream allMatch()
+In this example we have a stream of student details that consists student id, name and age. We have three predicates in this example, predicate p1 says that the student name starts with “A”, predicate p2 says that the student age is less than 40 and predicate p3 says that the age must be less than 40 and name should start with “P”.
+allMatch() method returns false for predicate p1 because there are students whose names do not start with “A”.
+allMatch() method returns true for predicate p2 because all students have age less than 40.
+allMatch() method returns false for predicate p3 because details of all the students do not statisfy the condition of age <40 and name start with “P”.
+
+Anymatch
+In this tutorial we will see the example of Java 8 Stream anyMatch() method. This method returns true if any elements of the Stream matches the given predicate.
+
+None match
+In the last tutorial we discussed java stream anyMatch() method. The stream noneMatch() method works just opposite to the anyMatch() method, it returns true if none of the stream elements match the given predicate, it returns false if any of the stream elements matches the condition specified by the predicate.
+
+spring cloud started load balancer
+which is brought into the class path
+by spring-Cloud-start-up-Netflix-Eureka-client.
+And this is the load balancer framework that is used
+by Feign to actually distribute the load
+among the multiple instances which are returned by Eureka.
+In the earlier versions of Spring Cloud
+the load balancer which was used was Ribbon
+and in the recent versions, spring cloud shifted
+to using spring cloud load balancer as the load balancer.
+The great thing is if you're using Eureka and Feign
+then load balancing comes for free.
+This is client site load balancing
+and this comes for free for you
+The great thing is if you're using Eureka and Feign
+
+then load balancing comes for free.
+
+This is client site load balancing
+
+and this comes for free for you.
+
+What I would recommend you to do is to
+
+stop certain instances
+
+
+
+====
+You have created an amazing Kubernetes cluster
+
+which is nothing but a group of servers
+
+that are managed together,
+
+and you are now connected to the cluster,
+
+and it's your friend's turn
+
+to specify the requirements now.
+
+He says, "I would quickly deploy an application
+
+with this specific image."
+
+You say, "Oops, that's easy.
+
+I just need to run a simple command.
+
+And you are there."
+
+for (int i = x; i <= n; i++) {
+            if(x!=0){
+            if(i%x==0 || i%y==0) {
+                if(i%z!=0) {
+                    
+                    list.add(i);
+                }
+                
+            }
+            }
+        }
+		
+		text block 
+		instance of with keyword
+		sealed classes
+				booking.com
+				
+				
+a tuple is an immutable list meaning once it's defined it cannot be changed
+
+with normal lists you can add remove and
+
+it's the values in the list but with tuples you can't tuples like lists our
+
+order and the values in the tuple can be accessed by index you can perform any of
+
+		
+		
+import java.util.*;  
+import java.io.*;  
+public class Sample {  
+public static void main(String[] args)throws Exception{  
+   FileReader reader = new FileReader("info.properties");  
+   Properties obj_p = new Properties();  
+   obj_p.load(reader);  
+   System.out.println(obj_p.getProperty("user"));  
+   System.out.println(obj_p.getProperty("password"));  
+}  
+} 
+
+26. Why does HashMap allow null whereas HashTable does not allow null?
+The objects used as keys must implement the hashCode and equals methods in order to successfully save and retrieve objects from a HashTable. These methods cannot be implemented by null because it is not an object. HashMap is a more advanced and improved variant of Hashtable.HashMap was invented after HashTable to overcome the shortcomings of HashTable.
+
+10. What are the various categories of pre-defined function interfaces?
+Function: To transform arguments in returnable value.
+
+Predicate: To perform a test and return a Boolean value.
+
+Consumer: Accept arguments but do not return any values.
+
+Supplier: Do not accept any arguments but return a value. 
+
+Operator: Perform a reduction type operation that accepts the same input types.
+
+11. What is the lambda expression in Java and How does a lambda expression relate to a functional interface?
+Lambda expression is a type of function without a name. It may or may not have results and parameters. It is known as an anonymous function as it does not have type information by itself. It is executed on-demand. It is beneficial in iterating, filtering, and extracting data from a collection.
+
+As lambda expressions are similar to anonymous functions, they can only be applied to the single abstract method of Functional Interface. It will infer the return type, type, and several arguments from the signature of the abstract method of functional interface
+
+for per mfe - that can be done
+for per component - one 
+For per file - 20 people can be owned --need to find out who owned the file whjo approve the code. 
+
+8. Why is a Character Array preferred over a string for storing confidential information?
+Once a string is declared, it remains in the heap memory even after processing the string value. This can result in the theft of information. This risk can be eliminated when mutable objects like character arrays are used. Once the processing is done, the variable can be assigned a blank or null value. It saves the heap memory and also protects the information.
+
+in Java, Lambda expressions basically express instances of functional interfaces (An interface with a single abstract method is called a functional interface). Lambda Expressions in Java are the same as lambda functions which are the short block of code that accepts input as parameters and returns a resultant value.
+
+
+Transaction management is the fundamental advantage of a shared database versus a per-service database. There's no need to spread transactions out across services
+
+In database management systems, block contention (or data contention) refers to multiple processes or instances competing for access to the same index or data block at the same time. In general this can be caused by very frequent index or table scans, or frequent updates
