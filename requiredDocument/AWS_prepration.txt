@@ -1,0 +1,262 @@
+So onto my exam tips for to just remember, EC2 is like a virtual machine, and it's hosted in AWS instead of being in your own data center.
+
+
+So there's OnDemand, which allows you to pay by the hour or second, depending on the type of instance
+
+you run, and this is a great option for flexibility.
+
+We've also got reserved instances, which allows you to reserve capacity for one or three years with
+
+a discount, they claim, of up to 72 percent on the hourly charge.
+
+And this is great if you've got no fixed requirements, we then have spot instances which allows you
+
+to purchase unused capacity at a discount of up to 90 percent.
+
+Prices fluctuate with supply and demand, and you set your maximum that you're willing to pay.
+
+And if the price goes over the maximum, they're going to either hibernate or terminate your instance
+
+depending on the options that you selected.
+
+And this is great for applications with flexible start and end times, but it's not so great for applications
+
+which need to be up and running all the time.
+
+And then finally, there is the dedicated option, and this is where you get a physical server dedicated
+
+for your use.
+
+And it's really great if you've got a server bound licenses that you want to reuse or if you have compliance
+
+requirements which are preventing you from using a multi tenancy option.
+
+
+Instance Type:
+
+So you select an instance type based on the requirements of the application that you plan to run on
+
+your instance.
+
+So there is a massive choice and it is growing steadily as they bring out more and more instance types.
+
+And the reason they have so many is because instant's types are optimized to fit different use cases
+
+and give you the flexibility to choose the appropriate mix of resources for your applications.
+
+Your application needs 100 strongly consistent reads on items that are 9 KB in size every second. How many units of read capacity units should you provision?
+
+You are planning to deploy a new version of your EC2 application using CodeDeploy. You only have a window of two hours to complete the deployment and test it. Your team leader is concerned about the time it could take to roll back the upgrade if it should fail. Which deployment approach would you recommend?
+
+
+Rolling with additional batch
+
+
+Blue / Green
+
+
+In-place
+
+
+Canary
+
+AWS Secrets Manager
+
+AWS Secrets Manager is the current AWS recommended way of securely provide database credentials to Lambda functions. AWS Secrets Manager aids in the managing and rotating the RDS database passwords. For implementation details, see:
+
+
+AWS Secrets Manager
+
+AWS Secrets Manager is the current AWS recommended way of securely provide database credentials to Lambda functions. AWS Secrets Manager aids in the managing and rotating the RDS database passwords. For implementation details, see:
+
+Once the user has logged in to the web identity provider, use Cognito to exchange the authentication tokens for temporary access to DynamoDB
+
+Using Cognito is the recommended approach to federating with web ID providers for mobile applications.
+
+Amazon Cognito for Mobile Apps
+
+
+Cross-origin resource sharing (CORS)
+
+Cross-origin resource sharing (CORS) defines a way for client web applications that are loaded in one domain to interact with resources in a different domain.
+
+
+A user authenticates with Facebook first. They are then given an ID token by Facebook. An API call, AssumeRoleWithWebIdentity, is then used in conjunction with the ID token. A user is then granted temporary security credentials.
+
+Set the viewer protocol policy to redirect HTTP to HTTPS
+
+Viewer protocol policy defines the protocols which can be used to access CloudFront content.
+
+
+HTTP endpoints using HTTPS protocol
+
+You can configure an Amazon CloudFront distribution to serve HTTPS requests for your Amazon S3 HTTP endpoints.
+
+Reference: How do I use CloudFront to serve HTTPS requests for my Amazon S3 bucket?
+
+Selected
+SSL endpoints using the HTTPS protocol
+
+You can securely upload/download your data to Amazon S3 via SSL endpoints using the HTTPS protocol.
+
+
+Use a bucket policy that only allows PUT operations, which include the x-amz-server-side-encryption parameter in the request header
+
+There are a few different ways to enforce encryption; however, from the provided options, the use of a bucket policy to reject requests that do not include encryption in their header is the best answer
+
+
+
+The .ebextensions folder.
+
+ElasticBeanstalk has configuration options for before, during, and after environment creation. these files are loaded from configuration files in the .ebextensions folder at the root of the application source bundle.
+
+
+Configure your load balancer to send all incoming requests to the original instances running the old version of the application.
+
+With an in-place deployment, you have installed the new version of your application on the original instances, so they are no longer running the previous version.
+
+Selected
+Use CodeDeploy to redeploy the previous version of the application.
+
+With an in-place upgrade, you will need to redeploy the original version. Only a Blue / Green upgrade allows you to keep the original instances and roll back by routing all requests to the original instances.
+
+
+ApplicationStop, BeforeInstall, AfterInstall, ApplicationStart
+
+The logical sequence is: ApplicationStop, BeforeInstall, AfterInstall, ApplicationStart
+
+Amazon ECS is a managed orchestration service that helps deploy, manage, and scale containerized applications.
+
+Amazon Elastic Container Service is a managed orchestration service that helps deploy, manage, and scale containerized applications.
+
+Immutable
+
+Immutable deployments involve provisioning new servers to ensure capacity is not reduced.
+0024470000
+Elastic Beanstalk Deployments
+
+Selected
+Rolling with additional batch
+
+Rolling with additional batch involves provisioning new servers to ensure capacity is not reduced.
+
+Elastic Beanstalk Deployments
+
+
+Make the application a Lambda function and create a scheduled event trigger set to 1 hour
+
+The question states that the application is to run once every hour, which immediately means we should be looking for an option which only utilizes resources when needed. Lambda is the only option in the above list which bills you only when an application is running.
+
+Amazon Lambda FAQs
+
+
+Store session state in RDS
+
+ElastiCache is the best option for storing session state as it is scalable, highly available, and can be accessed by multiple web servers. RDS is not optimal, but could be used for storing session state. Since you need to provide two answers, it is the only other viable answer.
+
+Performance at Scale with Amazon ElastiCache
+
+Use an ElastiCache cluster
+
+ElastiCache is the best option for storing session state as it is scalable, highly available, and can be accessed by multiple web servers. RDS is not optimal, but could be used for storing session state. Since you need to provide two answers, it is the only other viable answer.
+
+Configure a DAX cluster and point the DynamoDB API calls at the DAX cluster
+
+Using DAX is the recommended approach to reducing response times for read-intensive applications, applications which read a small number of items frequently and also applications which perform repeated reads against a large set of data.
+
+DynamoDB DAX	
+
+Configure annotations in your traces so that they can be indexed and filtered in the X-Ray console, based on the annotations.
+
+When you instrument your application, the X-Ray SDK records information about incoming and outgoing requests, the AWS resources used, and the application itself. You can add other information to the segment document as annotations and metadata. Annotations are simple key-value pairs that are indexed for use with filter expressions. Use annotations to record data that you want to use to group traces in the console.
+
+X-Ray Annotations and Metadata Searching for Traces in the AWS X-Ray Console with Filter Expressions
+
+
+
+
+Configure a CloudFront CDN
+
+CloudFront can speed up the delivery of your static content to users across the globe.
+
+
+
+You exceeded your maximum allowed provisioned throughput for a table or for one or more global secondary indexes.
+
+The ProvisionedThroughputExceededException means that you exceeded your maximum allowed provisioned throughput for a table or for one or more global secondary indexes.
+
+
+Use CloudWatch Events and an SNS topic to notify subscribers of build events
+
+CodeBuild natively supports CloudWatch Events; SNS is a subscription- based notification service which integrates with CloudWatch. Build Notifications
+
+
+Glacier Instant Retrieval is designed for long-lived data, accessed approximately once per quarter with millisecond retrieval time. 
+
+
+All Amazon S3 objects by default are private. Only the object owner has permission to access these objects. However, the object owner can optionally share objects with others by creating a presigned URL, using their own security credentials, to grant time-limited permission to download the objects. Sharing an object with a presigned URL.
+
+
+The following services provide X-Ray integration: AWS Lambda, Amazon API Gateway, Elastic Load Balancing, AWS Elastic Beanstalk, Amazon Simple Notification Service, and Amazon Simple Queue Service. 
+
+Which of the following options allows users to have secure access to private files located in S3?
+
+
+There are three options in the question which can be used to secure access to files stored in S3 and therefore can be considered correct. Signed URLs and Signed Cookies are different ways to ensure that users attempting access to files in an S3 bucket can be authorized. One method generates URLs and the other generates special cookies but they both require the creation of an application and policy to generate and control these items. An Origin Access Identity on the other hand, is a virtual user identity that is used to give the CloudFront distribution permission to fetch a private object from an S3 bucket. Public S3 buckets should never be used unless you are using the bucket to host a public website and therefore this is an incorrect option.
+
+
+
+Depending on your Region, your Amazon S3 website endpoint follows one of these two formats:
+
+s3-website dash (-) Region ‐ http://bucket-name.s3-website-Region.amazonaws.com
+s3-website dot (.) Region ‐ http://bucket-name.s3-website.Region.amazonaws.com
+
+
+In most cases a query is preferable to a scan operation. A scan is generally less efficient & more expensive.
+
+ProvisionedThroughputExceededException means that your application is sending more requests to the DynamoDB table than the provisioned read / write capacity can handle.
+
+ProvisionedThroughputExceededException means that your application is sending more requests to the DynamoDB table than the provisioned read / write capacity can handle.
+
+
+DynamoDB Streams captures a time-ordered sequence of item-level modifications in any DynamoDB table and stores this information in a log for up to 24 hours. Applications can access this log and view the data items as they appeared before and after they were modified, in near-real time
+
+
+Only Global secondary Indexes can be created or deleted at anytime. Local Secondary Indexes must be created when you first create the table and they cannot be modified or deleted.
+
+
+When using Query, or Scan, DynamoDB returns all of the item attributes by default. To get just some, rather than all of the attributes, use a Projection Expression.
+
+KMS is multi-tenant, whereas CloudHSM is dedicated hardware. S3 encryption and client-side encryption are not key management solutions.
+
+•	Working knowledge in Relational Database – MySQL, MongoDB, Elastic Search
+
+
+So if you see anything in the exam referring to decoupling your
+application components, I want you to think of SQS.And remember SQS is pull-based, not push-based.
+And there are 2 types of SQS queue to be aware of.
+You've got the standard queue and the FIFO queue,And with short polling,
+a response is returned immediately,
+even if no messages are in the queue and you will pay
+for every response you receive. So even if the queue is empty,
+you will still be charged for every single response.
+Whereas with long polling, that's where you periodically poll our queue,
+and it only returns a response when a message is actually in the
+queue, or if the timeout is reached,
+and this is most cost effective option,
+because it means you don't end up paying for loads of empty responses.
+if you don't have anything sitting in the queue. And in general,
+long polling is recommended because it's the most cost effective option.
+
+You can configure the Amazon SQS message retention period to a value from 1 minute to 14 days. The default is 4 days.
+
+
+The Transform section specifies one or more macros that AWS CloudFormation uses to process your template. The Transform section builds on the simple, declarative language of AWS CloudFormation with a powerful macro system. The declaration Transform: AWS::Serverless-2016-10-31 is required for AWS SAM template files.
+
+Correct. By default, the “automatic rollback on error” feature is enabled. This will direct CloudFormation to only create or update all resources in your stack if all individual operations succeed. If they do not, CloudFormation reverts the stack to the last known stable configuration.
+
+Elastic Beanstalk supports the deployment of web applications as Docker containers. Each time you upload a new version of your application with the Elastic Beanstalk console or the EB CLI, Elastic Beanstalk creates an application version. When using the console you can choose to upload and deploy your code in a single step. Elastic Beanstalk will manage the previous version of your code so you can revert back to it if necessary.
+
+
+Correct Answer
+Correct. Nested stacks are stacks created as part of other stacks. As your infrastructure grows, common patterns can emerge in which you declare the same components in multiple templates. You can separate out these common components and create dedicated templates for them. Then use the resource in your template to reference other templates, creating nested stacks. For example, assume that you have a load balancer configuration that you use for most of your stacks. Instead of copying and pasting the same configurations into your templates, you can create a dedicated template for the load balancer. Then, you just use the resource to reference that template from within other templates.
